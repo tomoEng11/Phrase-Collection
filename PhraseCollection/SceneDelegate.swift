@@ -15,10 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: scene)
-        let vc = CardViewController()
+        let vc = CardCollectionViewController()
         let navVC = UINavigationController(rootViewController: vc)
         navVC.navigationBar.prefersLargeTitles = true
-        window.rootViewController = CardCollectionViewController()
+        window.rootViewController = navVC
         self.window = window
         window.makeKeyAndVisible()
     }

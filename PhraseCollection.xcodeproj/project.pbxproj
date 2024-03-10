@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB39B95C2B9C2A6600C36D54 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39B95B2B9C2A6600C36D54 /* Data.swift */; };
 		BB7D56002B8B0B0700484BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D55FF2B8B0B0700484BC1 /* AppDelegate.swift */; };
 		BB7D56022B8B0B0700484BC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56012B8B0B0700484BC1 /* SceneDelegate.swift */; };
 		BB7D56092B8B0B0800484BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7D56082B8B0B0800484BC1 /* Assets.xcassets */; };
@@ -18,12 +19,13 @@
 		BB7D56222B8CBDE900484BC1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56212B8CBDE900484BC1 /* Item.swift */; };
 		BB7D56242B8CC22600484BC1 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56232B8CC22600484BC1 /* UIHelper.swift */; };
 		BB7D56282B8CC5B200484BC1 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56272B8CC5B200484BC1 /* CardCollectionViewCell.swift */; };
-		BB7D562A2B8E180900484BC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56292B8E180900484BC1 /* ViewController.swift */; };
-		BB7D562C2B8E1CD400484BC1 /* SampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D562B2B8E1CD400484BC1 /* SampleCell.swift */; };
 		BBE6B2F82B9B3C100085034A /* CustomTagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE6B2F72B9B3C100085034A /* CustomTagLabel.swift */; };
+		CE85D7518900C89523688EEA /* Pods_PhraseCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D43F87FE2FA3533239A32D /* Pods_PhraseCollection.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		406415506265570B9045F67A /* Pods-PhraseCollection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhraseCollection.debug.xcconfig"; path = "Target Support Files/Pods-PhraseCollection/Pods-PhraseCollection.debug.xcconfig"; sourceTree = "<group>"; };
+		BB39B95B2B9C2A6600C36D54 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		BB7D55FC2B8B0B0700484BC1 /* PhraseCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhraseCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7D55FF2B8B0B0700484BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB7D56012B8B0B0700484BC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,9 +39,9 @@
 		BB7D56212B8CBDE900484BC1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BB7D56232B8CC22600484BC1 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		BB7D56272B8CC5B200484BC1 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
-		BB7D56292B8E180900484BC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BB7D562B2B8E1CD400484BC1 /* SampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCell.swift; sourceTree = "<group>"; };
 		BBE6B2F72B9B3C100085034A /* CustomTagLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTagLabel.swift; sourceTree = "<group>"; };
+		D33B91CC8A024E58DAA67D3A /* Pods-PhraseCollection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhraseCollection.release.xcconfig"; path = "Target Support Files/Pods-PhraseCollection/Pods-PhraseCollection.release.xcconfig"; sourceTree = "<group>"; };
+		F2D43F87FE2FA3533239A32D /* Pods_PhraseCollection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhraseCollection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +49,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE85D7518900C89523688EEA /* Pods_PhraseCollection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F18774E7CFFDAEF5F4C635E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				406415506265570B9045F67A /* Pods-PhraseCollection.debug.xcconfig */,
+				D33B91CC8A024E58DAA67D3A /* Pods-PhraseCollection.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BB7D55F32B8B0B0600484BC1 = {
 			isa = PBXGroup;
 			children = (
 				BB7D55FE2B8B0B0700484BC1 /* PhraseCollection */,
 				BB7D55FD2B8B0B0700484BC1 /* Products */,
+				3F18774E7CFFDAEF5F4C635E /* Pods */,
+				FCF4FFB1B7B87DC15BF44FEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,21 +88,60 @@
 			children = (
 				BB7D55FF2B8B0B0700484BC1 /* AppDelegate.swift */,
 				BB7D56012B8B0B0700484BC1 /* SceneDelegate.swift */,
-				BB7D56132B8B0C7400484BC1 /* CardViewController.swift */,
-				BB7D561F2B8CBBC100484BC1 /* CardCollectionViewController.swift */,
-				BB7D56272B8CC5B200484BC1 /* CardCollectionViewCell.swift */,
-				BB7D56292B8E180900484BC1 /* ViewController.swift */,
-				BB7D562B2B8E1CD400484BC1 /* SampleCell.swift */,
+				BBB4D4B92B9C62D0002C645B /* Cell */,
+				BBB4D4B82B9C61FD002C645B /* ViewControllers */,
 				BB7D56232B8CC22600484BC1 /* UIHelper.swift */,
-				BB7D56192B8B18C300484BC1 /* SecondaryLabel.swift */,
-				BB7D561B2B8B214C00484BC1 /* BodyLabel.swift */,
-				BBE6B2F72B9B3C100085034A /* CustomTagLabel.swift */,
-				BB7D56212B8CBDE900484BC1 /* Item.swift */,
+				BBB4D4B72B9C61DB002C645B /* DataModel */,
+				BBB4D4B62B9C61A9002C645B /* CustomView */,
 				BB7D56082B8B0B0800484BC1 /* Assets.xcassets */,
 				BB7D560A2B8B0B0800484BC1 /* LaunchScreen.storyboard */,
 				BB7D560D2B8B0B0800484BC1 /* Info.plist */,
 			);
 			path = PhraseCollection;
+			sourceTree = "<group>";
+		};
+		BBB4D4B62B9C61A9002C645B /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				BBE6B2F72B9B3C100085034A /* CustomTagLabel.swift */,
+				BB7D56192B8B18C300484BC1 /* SecondaryLabel.swift */,
+				BB7D561B2B8B214C00484BC1 /* BodyLabel.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		BBB4D4B72B9C61DB002C645B /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D56212B8CBDE900484BC1 /* Item.swift */,
+				BB39B95B2B9C2A6600C36D54 /* Data.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		BBB4D4B82B9C61FD002C645B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D56132B8B0C7400484BC1 /* CardViewController.swift */,
+				BB7D561F2B8CBBC100484BC1 /* CardCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BBB4D4B92B9C62D0002C645B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D56272B8CC5B200484BC1 /* CardCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FCF4FFB1B7B87DC15BF44FEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2D43F87FE2FA3533239A32D /* Pods_PhraseCollection.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB7D56102B8B0B0800484BC1 /* Build configuration list for PBXNativeTarget "PhraseCollection" */;
 			buildPhases = (
+				927B7EB5F83448CFE4745501 /* [CP] Check Pods Manifest.lock */,
 				BB7D55F82B8B0B0700484BC1 /* Sources */,
 				BB7D55F92B8B0B0700484BC1 /* Frameworks */,
 				BB7D55FA2B8B0B0700484BC1 /* Resources */,
+				C594531B59CD3C8E0C3F2521 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,8 +190,6 @@
 				Base,
 			);
 			mainGroup = BB7D55F32B8B0B0600484BC1;
-			packageReferences = (
-			);
 			productRefGroup = BB7D55FD2B8B0B0700484BC1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -158,19 +211,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		927B7EB5F83448CFE4745501 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhraseCollection-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C594531B59CD3C8E0C3F2521 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhraseCollection/Pods-PhraseCollection-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhraseCollection/Pods-PhraseCollection-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhraseCollection/Pods-PhraseCollection-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB7D55F82B8B0B0700484BC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB7D562C2B8E1CD400484BC1 /* SampleCell.swift in Sources */,
-				BB7D562A2B8E180900484BC1 /* ViewController.swift in Sources */,
 				BBE6B2F82B9B3C100085034A /* CustomTagLabel.swift in Sources */,
 				BB7D56202B8CBBC100484BC1 /* CardCollectionViewController.swift in Sources */,
 				BB7D561C2B8B214C00484BC1 /* BodyLabel.swift in Sources */,
 				BB7D56282B8CC5B200484BC1 /* CardCollectionViewCell.swift in Sources */,
 				BB7D56002B8B0B0700484BC1 /* AppDelegate.swift in Sources */,
 				BB7D56022B8B0B0700484BC1 /* SceneDelegate.swift in Sources */,
+				BB39B95C2B9C2A6600C36D54 /* Data.swift in Sources */,
 				BB7D56222B8CBDE900484BC1 /* Item.swift in Sources */,
 				BB7D56142B8B0C7400484BC1 /* CardViewController.swift in Sources */,
 				BB7D561A2B8B18C300484BC1 /* SecondaryLabel.swift in Sources */,
@@ -313,12 +407,15 @@
 		};
 		BB7D56112B8B0B0800484BC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 406415506265570B9045F67A /* Pods-PhraseCollection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 67ZRFNK38N;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhraseCollection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -340,12 +437,15 @@
 		};
 		BB7D56122B8B0B0800484BC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D33B91CC8A024E58DAA67D3A /* Pods-PhraseCollection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 67ZRFNK38N;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhraseCollection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
