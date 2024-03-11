@@ -18,6 +18,7 @@ class CardCollectionViewController: UIViewController {
     var itemArray:[Item] = MockData.shared.items
     var filteredItemArray: [Item] = []
     var isSearching: Bool = false
+    let realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()

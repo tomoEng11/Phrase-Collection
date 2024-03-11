@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CardViewController: UIViewController {
 
@@ -14,7 +15,8 @@ class CardViewController: UIViewController {
     private let memoTextView = UITextView()
     private let stackView = UIStackView()
     private let cardView = UIView()
-    private let button = UIButton()
+    private let doneButton = UIButton()
+    let realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,28 +114,27 @@ class CardViewController: UIViewController {
     }
 
     func configureButton() {
-        cardView.addSubview(button)
-        button.backgroundColor = .secondarySystemBackground
-        button.layer.borderColor = UIColor.tintColor.cgColor
-        button.layer.borderWidth = 2
-        button.setImage(UIImage(systemName: "pencil"), for: .normal)
-        button.layer.masksToBounds = true
-        button.layer.cornerRadius = 24
-        button.translatesAutoresizingMaskIntoConstraints = false
+        cardView.addSubview(doneButton)
+        doneButton.backgroundColor = .secondarySystemBackground
+        doneButton.layer.borderColor = UIColor.tintColor.cgColor
+        doneButton.layer.borderWidth = 2
+        doneButton.setImage(UIImage(systemName: "pencil"), for: .normal)
+        doneButton.layer.masksToBounds = true
+        doneButton.layer.cornerRadius = 24
+        doneButton.translatesAutoresizingMaskIntoConstraints = false
+        doneButton.addTarget(self, action: #selector(doneButtonPressed), for: .touchUpInside)
 
         NSLayoutConstraint.activate([
-            button.heightAnchor.constraint(equalToConstant: 50),
-            button.widthAnchor.constraint(equalToConstant: 50),
-            button.centerYAnchor.constraint(equalTo: tagLabel.centerYAnchor),
-            button.trailingAnchor.constraint(equalTo: stackView.trailingAnchor)
+            doneButton.heightAnchor.constraint(equalToConstant: 50),
+            doneButton.widthAnchor.constraint(equalToConstant: 50),
+            doneButton.centerYAnchor.constraint(equalTo: tagLabel.centerYAnchor),
+            doneButton.trailingAnchor.constraint(equalTo: stackView.trailingAnchor)
         ])
     }
 
 
     func configureViewController() {
         view.backgroundColor = .systemBackground
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissKeyboard))
-        navigationItem.rightBarButtonItem = doneButton
     }
 
     func configureTapGesture() {
@@ -142,9 +143,28 @@ class CardViewController: UIViewController {
     }
 
     @objc private func dismissKeyboard(with gesture: UITapGestureRecognizer) {
-        print("Tap detected!")
+        print("Other Areas Tapped!")
         sentenceTextView.resignFirstResponder()
         memoTextView.resignFirstResponder()
+    }
+
+    @objc private func doneButtonPressed(with gesture: UITapGestureRecognizer) {
+        print("Done Button Pressed")
+
+        guard sentenceTextView.text != nil else { return }
+        let item = RealmData()
+        item.sentence = sentenceTextView.text
+        item.memo = memoTextView.text
+
+        try! realm.write {
+            realm.add(item)
+        }
+
+        let itemData = realm.objects(RealmData.self)
+        print("🟥全てのデータ\(itemData)")
+
+        sentenceTextView.text = ""
+        memoTextView.text = ""
     }
 }
 

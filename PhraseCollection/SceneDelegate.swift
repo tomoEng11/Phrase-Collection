@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let vc = CardCollectionViewController()
         let navVC = UINavigationController(rootViewController: vc)
         navVC.navigationBar.prefersLargeTitles = true
-        window.rootViewController = navVC
+        window.rootViewController = CardViewController()
         self.window = window
         window.makeKeyAndVisible()
     }
