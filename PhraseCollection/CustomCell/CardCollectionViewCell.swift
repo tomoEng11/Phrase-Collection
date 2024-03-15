@@ -11,19 +11,26 @@ class CardCollectionViewCell: UICollectionViewCell {
 
     private let sentenceLabel = UILabel()
     private let tagLabel = CustomTagLabel(backgroundColor: .systemOrange, fontSize: 12)
-    static let reuseID = "Cell"
+    static let reuseID = "CardCollectionViewCell"
+    let checkmarkImageView = UIImageView()
+//    override var isSelected: Bool {
+//        didSet {
+//            checkmarkImageView.isHidden = !isSelected
+//        }
+//    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureTagLabel()
         configureSentenceLabel()
+        configureCheckmarkImageView()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func set(with item: Item) {
+    func set(with item: RealmData) {
         self.sentenceLabel.text = item.sentence
         self.backgroundColor = .systemBackground
         self.layer.masksToBounds = true
@@ -63,6 +70,22 @@ class CardCollectionViewCell: UICollectionViewCell {
             sentenceLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
             sentenceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
         ])
+    }
+
+    private func configureCheckmarkImageView() {
+        checkmarkImageView.translatesAutoresizingMaskIntoConstraints = false
+        checkmarkImageView.image = UIImage(systemName: "checkmark") // チェックマークの画像
+        checkmarkImageView.isHidden = true
+
+        contentView.addSubview(checkmarkImageView)
+        NSLayoutConstraint.activate([
+            checkmarkImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            checkmarkImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10)
+        ])
+    }
+
+    func reverseIsSelected() {
+        checkmarkImageView.isHidden = !isSelected
     }
 }
 

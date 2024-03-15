@@ -12,13 +12,20 @@
 		BB7D56022B8B0B0700484BC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56012B8B0B0700484BC1 /* SceneDelegate.swift */; };
 		BB7D56092B8B0B0800484BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7D56082B8B0B0800484BC1 /* Assets.xcassets */; };
 		BB7D560C2B8B0B0800484BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D560A2B8B0B0800484BC1 /* LaunchScreen.storyboard */; };
-		BB7D56142B8B0C7400484BC1 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56132B8B0C7400484BC1 /* CardViewController.swift */; };
-		BB7D561A2B8B18C300484BC1 /* SecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56192B8B18C300484BC1 /* SecondaryLabel.swift */; };
-		BB7D561C2B8B214C00484BC1 /* BodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D561B2B8B214C00484BC1 /* BodyLabel.swift */; };
-		BB7D56202B8CBBC100484BC1 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D561F2B8CBBC100484BC1 /* CardCollectionViewController.swift */; };
+		BB7D56142B8B0C7400484BC1 /* CardEdittingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56132B8B0C7400484BC1 /* CardEdittingVC.swift */; };
+		BB7D561A2B8B18C300484BC1 /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56192B8B18C300484BC1 /* Custom.swift */; };
+		BB7D561C2B8B214C00484BC1 /* CustomBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D561B2B8B214C00484BC1 /* CustomBodyLabel.swift */; };
+		BB7D56202B8CBBC100484BC1 /* CardCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D561F2B8CBBC100484BC1 /* CardCollectionVC.swift */; };
 		BB7D56222B8CBDE900484BC1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56212B8CBDE900484BC1 /* Item.swift */; };
 		BB7D56242B8CC22600484BC1 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56232B8CC22600484BC1 /* UIHelper.swift */; };
 		BB7D56282B8CC5B200484BC1 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56272B8CC5B200484BC1 /* CardCollectionViewCell.swift */; };
+		BB90FA902BA09DF7009B85ED /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90FA8F2BA09DF7009B85ED /* MainTabBarController.swift */; };
+		BB90FA922BA19FD4009B85ED /* CardDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90FA912BA19FD4009B85ED /* CardDetailVC.swift */; };
+		BB90FA962BA1B94A009B85ED /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90FA952BA1B94A009B85ED /* UIViewController+Extension.swift */; };
+		BB90FA982BA1BA5F009B85ED /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90FA972BA1BA5F009B85ED /* AlertVC.swift */; };
+		BB90FA9A2BA1BB1D009B85ED /* CustomTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90FA992BA1BB1D009B85ED /* CustomTitleLabel.swift */; };
+		BB90FA9D2BA1BB83009B85ED /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90FA9C2BA1BB83009B85ED /* CustomButton.swift */; };
+		BB90FAA52BA1CCC3009B85ED /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90FAA42BA1CCC3009B85ED /* CustomView.swift */; };
 		BBE6B2F82B9B3C100085034A /* CustomTagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE6B2F72B9B3C100085034A /* CustomTagLabel.swift */; };
 		CE85D7518900C89523688EEA /* Pods_PhraseCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D43F87FE2FA3533239A32D /* Pods_PhraseCollection.framework */; };
 /* End PBXBuildFile section */
@@ -32,13 +39,20 @@
 		BB7D56082B8B0B0800484BC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB7D560B2B8B0B0800484BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB7D560D2B8B0B0800484BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB7D56132B8B0C7400484BC1 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
-		BB7D56192B8B18C300484BC1 /* SecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabel.swift; sourceTree = "<group>"; };
-		BB7D561B2B8B214C00484BC1 /* BodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyLabel.swift; sourceTree = "<group>"; };
-		BB7D561F2B8CBBC100484BC1 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
+		BB7D56132B8B0C7400484BC1 /* CardEdittingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardEdittingVC.swift; sourceTree = "<group>"; };
+		BB7D56192B8B18C300484BC1 /* Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
+		BB7D561B2B8B214C00484BC1 /* CustomBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBodyLabel.swift; sourceTree = "<group>"; };
+		BB7D561F2B8CBBC100484BC1 /* CardCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionVC.swift; sourceTree = "<group>"; };
 		BB7D56212B8CBDE900484BC1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BB7D56232B8CC22600484BC1 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		BB7D56272B8CC5B200484BC1 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB90FA8F2BA09DF7009B85ED /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BB90FA912BA19FD4009B85ED /* CardDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailVC.swift; sourceTree = "<group>"; };
+		BB90FA952BA1B94A009B85ED /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		BB90FA972BA1BA5F009B85ED /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
+		BB90FA992BA1BB1D009B85ED /* CustomTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleLabel.swift; sourceTree = "<group>"; };
+		BB90FA9C2BA1BB83009B85ED /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		BB90FAA42BA1CCC3009B85ED /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		BBE6B2F72B9B3C100085034A /* CustomTagLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTagLabel.swift; sourceTree = "<group>"; };
 		D33B91CC8A024E58DAA67D3A /* Pods-PhraseCollection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhraseCollection.release.xcconfig"; path = "Target Support Files/Pods-PhraseCollection/Pods-PhraseCollection.release.xcconfig"; sourceTree = "<group>"; };
 		F2D43F87FE2FA3533239A32D /* Pods_PhraseCollection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhraseCollection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,28 +100,74 @@
 		BB7D55FE2B8B0B0700484BC1 /* PhraseCollection */ = {
 			isa = PBXGroup;
 			children = (
-				BB7D55FF2B8B0B0700484BC1 /* AppDelegate.swift */,
-				BB7D56012B8B0B0700484BC1 /* SceneDelegate.swift */,
-				BBB4D4B92B9C62D0002C645B /* Cell */,
+				BB90FA932BA1B76E009B85ED /* Support */,
+				BB90FA9E2BA1BCD5009B85ED /* TabBarController */,
 				BBB4D4B82B9C61FD002C645B /* ViewControllers */,
+				BB90FA9B2BA1BB71009B85ED /* CustomButton */,
+				BB90FAA32BA1CC82009B85ED /* CustomView */,
+				BBB4D4B92B9C62D0002C645B /* CustomCell */,
 				BB7D56232B8CC22600484BC1 /* UIHelper.swift */,
+				BBB4D4B62B9C61A9002C645B /* CustomLabel */,
 				BBB4D4B72B9C61DB002C645B /* DataModel */,
-				BBB4D4B62B9C61A9002C645B /* CustomView */,
-				BB7D56082B8B0B0800484BC1 /* Assets.xcassets */,
-				BB7D560A2B8B0B0800484BC1 /* LaunchScreen.storyboard */,
-				BB7D560D2B8B0B0800484BC1 /* Info.plist */,
+				BB90FA942BA1B883009B85ED /* Extensions */,
 			);
 			path = PhraseCollection;
 			sourceTree = "<group>";
 		};
-		BBB4D4B62B9C61A9002C645B /* CustomView */ = {
+		BB90FA932BA1B76E009B85ED /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D55FF2B8B0B0700484BC1 /* AppDelegate.swift */,
+				BB7D56012B8B0B0700484BC1 /* SceneDelegate.swift */,
+				BB7D56082B8B0B0800484BC1 /* Assets.xcassets */,
+				BB7D560A2B8B0B0800484BC1 /* LaunchScreen.storyboard */,
+				BB7D560D2B8B0B0800484BC1 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		BB90FA942BA1B883009B85ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB90FA952BA1B94A009B85ED /* UIViewController+Extension.swift */,
+			);
+			name = Extensions;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		BB90FA9B2BA1BB71009B85ED /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				BB90FA9C2BA1BB83009B85ED /* CustomButton.swift */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		BB90FA9E2BA1BCD5009B85ED /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				BB90FA8F2BA09DF7009B85ED /* MainTabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		BB90FAA32BA1CC82009B85ED /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				BB90FAA42BA1CCC3009B85ED /* CustomView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		BBB4D4B62B9C61A9002C645B /* CustomLabel */ = {
 			isa = PBXGroup;
 			children = (
 				BBE6B2F72B9B3C100085034A /* CustomTagLabel.swift */,
-				BB7D56192B8B18C300484BC1 /* SecondaryLabel.swift */,
-				BB7D561B2B8B214C00484BC1 /* BodyLabel.swift */,
+				BB90FA992BA1BB1D009B85ED /* CustomTitleLabel.swift */,
+				BB7D56192B8B18C300484BC1 /* Custom.swift */,
+				BB7D561B2B8B214C00484BC1 /* CustomBodyLabel.swift */,
 			);
-			path = CustomView;
+			path = CustomLabel;
 			sourceTree = "<group>";
 		};
 		BBB4D4B72B9C61DB002C645B /* DataModel */ = {
@@ -122,18 +182,20 @@
 		BBB4D4B82B9C61FD002C645B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BB7D56132B8B0C7400484BC1 /* CardViewController.swift */,
-				BB7D561F2B8CBBC100484BC1 /* CardCollectionViewController.swift */,
+				BB7D56132B8B0C7400484BC1 /* CardEdittingVC.swift */,
+				BB90FA912BA19FD4009B85ED /* CardDetailVC.swift */,
+				BB7D561F2B8CBBC100484BC1 /* CardCollectionVC.swift */,
+				BB90FA972BA1BA5F009B85ED /* AlertVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		BBB4D4B92B9C62D0002C645B /* Cell */ = {
+		BBB4D4B92B9C62D0002C645B /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
 				BB7D56272B8CC5B200484BC1 /* CardCollectionViewCell.swift */,
 			);
-			path = Cell;
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 		FCF4FFB1B7B87DC15BF44FEB /* Frameworks */ = {
@@ -259,16 +321,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBE6B2F82B9B3C100085034A /* CustomTagLabel.swift in Sources */,
-				BB7D56202B8CBBC100484BC1 /* CardCollectionViewController.swift in Sources */,
-				BB7D561C2B8B214C00484BC1 /* BodyLabel.swift in Sources */,
+				BB7D56202B8CBBC100484BC1 /* CardCollectionVC.swift in Sources */,
+				BB90FAA52BA1CCC3009B85ED /* CustomView.swift in Sources */,
+				BB90FA902BA09DF7009B85ED /* MainTabBarController.swift in Sources */,
+				BB90FA982BA1BA5F009B85ED /* AlertVC.swift in Sources */,
+				BB90FA922BA19FD4009B85ED /* CardDetailVC.swift in Sources */,
+				BB90FA962BA1B94A009B85ED /* UIViewController+Extension.swift in Sources */,
+				BB7D561C2B8B214C00484BC1 /* CustomBodyLabel.swift in Sources */,
 				BB7D56282B8CC5B200484BC1 /* CardCollectionViewCell.swift in Sources */,
 				BB7D56002B8B0B0700484BC1 /* AppDelegate.swift in Sources */,
 				BB7D56022B8B0B0700484BC1 /* SceneDelegate.swift in Sources */,
 				BB39B95C2B9C2A6600C36D54 /* Data.swift in Sources */,
 				BB7D56222B8CBDE900484BC1 /* Item.swift in Sources */,
-				BB7D56142B8B0C7400484BC1 /* CardViewController.swift in Sources */,
-				BB7D561A2B8B18C300484BC1 /* SecondaryLabel.swift in Sources */,
+				BB7D56142B8B0C7400484BC1 /* CardEdittingVC.swift in Sources */,
+				BB90FA9A2BA1BB1D009B85ED /* CustomTitleLabel.swift in Sources */,
+				BB7D561A2B8B18C300484BC1 /* Custom.swift in Sources */,
 				BB7D56242B8CC22600484BC1 /* UIHelper.swift in Sources */,
+				BB90FA9D2BA1BB83009B85ED /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +486,7 @@
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PhraseCollection/Info.plist;
+				INFOPLIST_FILE = PhraseCollection/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -447,7 +516,7 @@
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PhraseCollection/Info.plist;
+				INFOPLIST_FILE = PhraseCollection/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
