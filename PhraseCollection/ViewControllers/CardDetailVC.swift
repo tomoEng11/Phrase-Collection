@@ -16,16 +16,20 @@ class CardDetailVC: UIViewController {
     private let stackView = UIStackView()
     private let cardView = UIView()
     private let doneButton = UIButton()
+    var isModifying: Bool = false
     let realm = try! Realm()
+    var previousItem: DataModel?
+    let toolBar = UIToolbar()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViewController()
         configureTagLabel()
         configureSentenceTextView()
         configureMemoTextView()
         configureStackView()
         configureCardView()
+        configureViewController()
     }
 
     private func configureCardView() {
@@ -94,7 +98,9 @@ class CardDetailVC: UIViewController {
 
     func configureMemoTextView() {
         stackView.addArrangedSubview(memoTextView)
+        print("Before memoTextView.isEditable: \(memoTextView.isEditable)")
         memoTextView.isEditable = false
+        print("After memoTextView.isEditable: \(memoTextView.isEditable)")
         memoTextView.font = UIFont.systemFont(ofSize: 20)
         memoTextView.textColor = .white
         memoTextView.layer.cornerRadius = 10
@@ -112,13 +118,101 @@ class CardDetailVC: UIViewController {
 
     func configureViewController() {
         view.backgroundColor = .systemBackground
-        let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonPressed))
-        navigationItem.rightBarButtonItem = editButton
+        let addButton = UIBarButtonItem(title: "Edit", style: .plain, target: self , action: #selector(addButtonPressed))
+        navigationItem.rightBarButtonItem = addButton
     }
 
-    @objc private func editButtonPressed() {
-        print("Edit Button Pressed")
+    @objc private func addButtonPressed() {
+        memoTextView.isEditable.toggle()
+        sentenceTextView.isEditable.toggle()
+        isModifying.toggle()
 
+        if memoTextView.isEditable && isModifying {
+            configureToolBar()
+            toolBar.isHidden = false
+
+            if let currentItem = realm.objects(DataModel.self).filter("sentence == %@", sentenceTextView.text!).first {
+                previousItem = currentItem
+            }
+            print("編集中")
+            let addButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self , action: #selector(addButtonPressed))
+            navigationItem.rightBarButtonItem = addButton
+        } else {
+            print("閲覧のみ")
+            let addButton = UIBarButtonItem(title: "Edit", style: .plain, target: self , action: #selector(addButtonPressed))
+            navigationItem.rightBarButtonItem = addButton
+        }
+    }
+
+    private func configureToolBar() {
+        view.addSubview(toolBar)
+        toolBar.translatesAutoresizingMaskIntoConstraints = false
+        toolBar.sizeToFit()
+        toolBar.backgroundColor = .systemBackground
+        toolBar.isHidden = true
+
+        NSLayoutConstraint.activate([
+            toolBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            toolBar.widthAnchor.constraint(equalTo: view.widthAnchor),
+            toolBar.heightAnchor.constraint(equalToConstant: 55)
+        ])
+
+        // スペーサー構築
+        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil)
+        // 削除ボタン構築
+
+        let deleteButton = UIBarButtonItem(title: "delete", style: .plain, target: self, action: #selector(deleteButtonTapped))
+
+        let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonTapped))
+
+        toolBar.items = [ spacer, deleteButton, spacer, saveButton, spacer]
+        let lineView = UIView()
+        lineView.backgroundColor = .secondarySystemBackground // グレーのラインを作成
+
+        // 2. ToolBarまたはTabBarにビューを追加します。
+        toolBar.addSubview(lineView)
+        lineView.translatesAutoresizingMaskIntoConstraints = false
+        lineView.heightAnchor.constraint(equalToConstant: 1).isActive = true // ラインの高さを設定
+        lineView.leadingAnchor.constraint(equalTo: toolBar.leadingAnchor).isActive = true // ToolBarの左端に配置
+        lineView.trailingAnchor.constraint(equalTo: toolBar.trailingAnchor).isActive = true // ToolBarの右端に配置
+        lineView.bottomAnchor.constraint(equalTo: toolBar.bottomAnchor).isActive = true // ToolBarの上端に配置
+    }
+
+    @objc private func saveButtonTapped() {
+        print("save tapped")
+        toolBar.isHidden = true
+        memoTextView.isEditable.toggle()
+        sentenceTextView.isEditable.toggle()
+
+        if let newItem = realm.objects(DataModel.self).filter("sentence == %@", previousItem?.sentence).first {
+            do {
+                try realm.write {
+                    newItem.sentence = sentenceTextView.text
+                    newItem.memo = memoTextView.text
+                    realm.add(newItem)
+                }
+            } catch {
+                print("error")
+            }
+        }
+        presentAlertOnMainThread(title: "カードが保存されました", message: "", buttonTitle: "OK")
+
+        self.navigationController?.popViewController(animated: true)
+    }
+
+    @objc private func deleteButtonTapped() {
+        print("delete tapped")
+        if let currentItem = realm.objects(DataModel.self).filter("sentence == %@", sentenceTextView.text!).first {
+            do {
+                try realm.write {
+                    realm.delete(currentItem)
+                }
+            } catch {
+                print("deleteできませんでした")
+            }
+            presentAlertOnMainThread(title: "削除が完了しました", message: "", buttonTitle: "OK")
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }
 
@@ -126,7 +220,3 @@ class CardDetailVC: UIViewController {
     let vc = CardDetailVC()
     return vc
 }
-
-//extension CardDetailVC: UITextViewDelegate {
-//
-//}

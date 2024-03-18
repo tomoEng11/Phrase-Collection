@@ -109,7 +109,6 @@ class CardEdittingVC: UIViewController {
             memoTextView.topAnchor.constraint(equalTo: sentenceTextView.bottomAnchor, constant: 24),
             memoTextView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
             memoTextView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
-//            memoTextView.bottomAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 24)
             memoTextView.heightAnchor.constraint(equalTo: sentenceTextView.heightAnchor)
         ])
     }
@@ -136,14 +135,31 @@ class CardEdittingVC: UIViewController {
 
     func configureViewController() {
         view.backgroundColor = .systemBackground
-        self.title = "Phrase Collection"
-        let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonPressed))
-        navigationItem.rightBarButtonItem = editButton
+        self.title = "Register"
+
+        let addButton = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addButtonPressed))
+        navigationItem.rightBarButtonItem = addButton
     }
 
-    @objc private func editButtonPressed() {
-        print("Edit Button Pressed")
+    @objc private func addButtonPressed() {
+        print("Add Button Pressed")
 
+        guard sentenceTextView.text != nil && sentenceTextView.text != "" else {
+            presentAlertOnMainThread(title: "何か入力してください", message: "", buttonTitle: "OK")
+            return
+        }
+
+        let item = DataModel()
+        item.sentence = sentenceTextView.text
+        item.memo = memoTextView.text
+
+        try! realm.write {
+            realm.add(item)
+        }
+        presentAlertOnMainThread(title: "カードが追加されました", message: "", buttonTitle: "OK")
+
+        sentenceTextView.text = ""
+        memoTextView.text = ""
     }
 
     func configureTapGesture() {
@@ -165,7 +181,7 @@ class CardEdittingVC: UIViewController {
             return
         }
 
-        let item = RealmData()
+        let item = DataModel()
         item.sentence = sentenceTextView.text
         item.memo = memoTextView.text
 
@@ -182,7 +198,6 @@ class CardEdittingVC: UIViewController {
 extension CardEdittingVC: UITextViewDelegate {
 
     func textViewDidChange(_ textView: UITextView) {
-
     }
 }
 

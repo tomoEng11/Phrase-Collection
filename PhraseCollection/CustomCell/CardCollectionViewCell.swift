@@ -30,13 +30,14 @@ class CardCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func set(with item: RealmData) {
+    func set(with item: DataModel) {
         self.sentenceLabel.text = item.sentence
         self.backgroundColor = .systemBackground
         self.layer.masksToBounds = true
         self.layer.borderWidth = 2
         self.layer.borderColor = UIColor.lightGray.cgColor
         self.layer.cornerRadius = 10
+        self.checkmarkImageView.isHidden = !item.isChecked
     }
 
     private func configureTagLabel() {
@@ -84,8 +85,8 @@ class CardCollectionViewCell: UICollectionViewCell {
         ])
     }
 
-    func reverseIsSelected() {
-        checkmarkImageView.isHidden = !isSelected
+    func reverseIsSelected(item: DataModel) {
+        checkmarkImageView.isHidden = !item.isChecked
     }
 }
 
