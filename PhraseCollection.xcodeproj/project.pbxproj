@@ -12,7 +12,6 @@
 		BB7D56092B8B0B0800484BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7D56082B8B0B0800484BC1 /* Assets.xcassets */; };
 		BB7D560C2B8B0B0800484BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D560A2B8B0B0800484BC1 /* LaunchScreen.storyboard */; };
 		BB7D56142B8B0C7400484BC1 /* CardEdittingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56132B8B0C7400484BC1 /* CardEdittingVC.swift */; };
-		BB7D561A2B8B18C300484BC1 /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56192B8B18C300484BC1 /* Custom.swift */; };
 		BB7D561C2B8B214C00484BC1 /* CustomBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D561B2B8B214C00484BC1 /* CustomBodyLabel.swift */; };
 		BB7D56202B8CBBC100484BC1 /* CardCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D561F2B8CBBC100484BC1 /* CardCollectionVC.swift */; };
 		BB7D56222B8CBDE900484BC1 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D56212B8CBDE900484BC1 /* DataModel.swift */; };
@@ -40,7 +39,6 @@
 		BB7D560B2B8B0B0800484BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB7D560D2B8B0B0800484BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7D56132B8B0C7400484BC1 /* CardEdittingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardEdittingVC.swift; sourceTree = "<group>"; };
-		BB7D56192B8B18C300484BC1 /* Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
 		BB7D561B2B8B214C00484BC1 /* CustomBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBodyLabel.swift; sourceTree = "<group>"; };
 		BB7D561F2B8CBBC100484BC1 /* CardCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionVC.swift; sourceTree = "<group>"; };
 		BB7D56212B8CBDE900484BC1 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 			children = (
 				BBE6B2F72B9B3C100085034A /* CustomTagLabel.swift */,
 				BB90FA992BA1BB1D009B85ED /* CustomTitleLabel.swift */,
-				BB7D56192B8B18C300484BC1 /* Custom.swift */,
 				BB7D561B2B8B214C00484BC1 /* CustomBodyLabel.swift */,
 			);
 			path = CustomLabel;
@@ -338,7 +335,6 @@
 				BB7D56142B8B0C7400484BC1 /* CardEdittingVC.swift in Sources */,
 				BB90FA9A2BA1BB1D009B85ED /* CustomTitleLabel.swift in Sources */,
 				BB90FAAF2BA876E1009B85ED /* CustomBarButtonItem.swift in Sources */,
-				BB7D561A2B8B18C300484BC1 /* Custom.swift in Sources */,
 				BB7D56242B8CC22600484BC1 /* UIHelper.swift in Sources */,
 				BB90FA9D2BA1BB83009B85ED /* CustomButton.swift in Sources */,
 				BB90FAAB2BA5E7D2009B85ED /* Realm.swift in Sources */,

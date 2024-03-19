@@ -135,7 +135,7 @@ class CardEdittingVC: UIViewController {
 
     func configureViewController() {
         view.backgroundColor = .systemBackground
-        self.title = "Register"
+        self.title = "New Card"
 
         let addButton = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addButtonPressed))
         navigationItem.rightBarButtonItem = addButton
